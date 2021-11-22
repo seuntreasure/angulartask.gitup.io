@@ -30,8 +30,8 @@
               "src/styles.css",
               "src/assets/vendors/styles/core.css",
               "src/assets/vendors/styles/icon-font.min.css",
-              "src/plugins/datatables/css/dataTables.bootstrap4.min.css",
-              "src/plugins/datatables/css/responsive.bootstrap4.min.css",
+              "src/assets/src/plugins/datatables/css/dataTables.bootstrap4.min.css",
+              "src/assets/src/plugins/datatables/css/responsive.bootstrap4.min.css",
               "src/assets/vendors/styles/style.css"
             ],
             "scripts": [
@@ -39,11 +39,11 @@
               "src/assets/vendors/scripts/script.min.js",
               "src/assets/vendors/scripts/process.js",
               "src/assets/vendors/scripts/layout-settings.js",
-              "src/plugins/apexcharts/apexcharts.min.js",
-              "src/plugins/datatables/js/jquery.dataTables.min.js",
-              "src/plugins/datatables/js/dataTables.bootstrap4.min.js",
-              "src/plugins/datatables/js/dataTables.responsive.min.js",
-              "src/plugins/datatables/js/responsive.bootstrap4.min.js",
+              "src/assets/src/plugins/apexcharts/apexcharts.min.js",
+              "src/assets/src/plugins/datatables/js/jquery.dataTables.min.js",
+              "src/assets/src/plugins/datatables/js/dataTables.bootstrap4.min.js",
+              "src/assets/src/plugins/datatables/js/dataTables.responsive.min.js",
+              "src/assets/src/plugins/datatables/js/responsive.bootstrap4.min.js",
               "src/assets/vendors/scripts/dashboard.js"
 
             ]

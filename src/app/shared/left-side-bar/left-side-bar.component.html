@@ -11,16 +11,20 @@
     <div class="menu-block customscroll">
       <div class="sidebar-menu">
         <ul id="accordion-menu">
-          <li class="dropdown">
-            <a href="javascript:;" class="dropdown-toggle">
-              <span class="micon dw dw-house-1"></span><span class="mtext">Home</span>
+
+
+          <li class="dropdown" *ngFor="let item of navItem">
+            <a href="{{item.link}}" class="dropdown-toggle">
+              <span class="micon dw dw-edit2"></span><span class="mtext">{{item.name}}</span>
             </a>
-            <ul class="submenu">
-              <li><a href="index.html">Dashboard style 1</a></li>
-              <li><a href="index2.html">Dashboard style 2</a></li>
+            <ul class="submenu" *ngFor="let submenu of item.subMenu">
+              <li><a href="{{submenu.link}}">{{submenu.name}}</a></li>
+              
             </ul>
           </li>
-          <li class="dropdown">
+
+
+          <!-- <li class="dropdown">
             <a href="javascript:;" class="dropdown-toggle">
               <span class="micon dw dw-edit2"></span><span class="mtext">Forms</span>
             </a>
@@ -192,7 +196,7 @@
               <span class="micon dw dw-paper-plane1"></span>
               <span class="mtext">Landing Page <img src="/assets/vendors/images/coming-soon.png" alt="" width="25"></span>
             </a>
-          </li>
+          </li> -->
         </ul>
       </div>
     </div>
