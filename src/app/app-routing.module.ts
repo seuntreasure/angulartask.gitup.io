@@ -4,7 +4,7 @@ import { HomeComponent } from "./pages/home/home.component";
 import { LeftSideBarComponent } from "./shared/left-side-bar/left-side-bar.component";
 import { PreLoaderComponent } from "./shared/pre-loader/pre-loader.component";
 import { HeaderComponent } from "./shared/header/header.component";
-import { SharedModule } from "./shared/shared.module";
+import { SharedModule, sharedModuleComponents } from "./shared/shared.module";
 import { RightSidebarComponent } from "./shared/right-sidebar/right-sidebar.component";
 import { DashBoardComponent } from "./pages/dash-board/dash-board.component";
 import { CreateProductComponent } from "./pages/product/create-product/create-product.component";
@@ -17,51 +17,27 @@ import { ViewUserComponent } from "./pages/user-management/view-user/view-user.c
 
 
 const routes: Routes = [
-    {path: '', component: HomeComponent, children: [
-        {path: '', component: HomeComponent, pathMatch:'full'},
-        {path: '', component: PreLoaderComponent},
-        {path: '', component: HeaderComponent},
-        {path: '', component: LeftSideBarComponent}, 
-        {path: '', component: RightSidebarComponent}
-    ]},
-    {path: 'dashboard', component: DashBoardComponent,pathMatch:'full'},
-    {path: 'orders', children: [
-        {path: 'list-orders', component: ListOrdersComponent,pathMatch:'full'},
-    ]},
     
-    {path: 'Categories', children: [
-        {path: 'create-category', component: CreateCategoryComponent},
-        {path: 'view-categories', component: ViewCategoryComponent}
-    ]},
-    {path: 'product', children: [
-        {path: 'create-product', redirectTo:"create-users", component: CreateProductComponent, pathMatch:'full'},
-        {path: 'list-product', component: ListProductComponent, pathMatch:'full'},
-    ]},
-    {path: 'user-management', children: [
-        {path: 'create-user', component: CreateUserComponent, pathMatch:'full'},
-        {path: 'view-user', component: ViewUserComponent, pathMatch:'full'},
-    ]},
-
+    {path: 'dash-board', component: DashBoardComponent},
+    {path: 'create-category', component: CreateCategoryComponent},
+    {path: 'view-category', component: ViewCategoryComponent},
+    {path: 'list-orders', component: ListOrdersComponent},
+    {path: 'create-product', redirectTo:"create-users", component: CreateProductComponent},
+    {path: 'list-product', component: ListProductComponent},
+    {path: 'create-user', component: CreateUserComponent, pathMatch:'full'},
+    {path: 'view-user', component: ViewUserComponent, pathMatch:'full'},
+    
+     
 ]
 
 @NgModule({
-    
-    imports: [RouterModule.forRoot(routes),
-    
-        
-    ],
-    exports: [RouterModule,
-        
-        CreateProductComponent,
-        ListProductComponent,
-        CreateCategoryComponent,
-        ViewCategoryComponent,
-        CreateUserComponent,
-        ViewUserComponent,
-        ListOrdersComponent
-    ],
+    imports: [RouterModule.forRoot(routes), SharedModule],
+    exports: [RouterModule],
 
 })
 export class AppRoutingModule {
     
 }
+export const routingModuleComponents = [
+    HomeComponent,DashBoardComponent, CreateProductComponent, ListProductComponent, CreateCategoryComponent, ViewCategoryComponent, ListOrdersComponent, CreateUserComponent, ViewUserComponent
+]

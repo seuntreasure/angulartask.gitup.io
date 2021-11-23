@@ -30,3 +30,11 @@ import { FooterComponent } from './footer/footer.component';
   ]
 })
 export class SharedModule { }
+export const sharedModuleComponents = [
+  PreLoaderComponent,
+  HeaderComponent,
+  RightSidebarComponent,
+  LeftSideBarComponent,
+  FooterComponent,
+  CommonModule
+]
