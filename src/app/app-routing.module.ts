@@ -10,7 +10,7 @@ import { DashBoardComponent } from "./pages/dash-board/dash-board.component";
 import { CreateProductComponent } from "./pages/product/create-product/create-product.component";
 import { CreateCategoryComponent } from "./pages/categories/create-category/create-category.component";
 import { ViewCategoryComponent } from "./pages/categories/view-category/view-category.component";
-import { ListProductComponent } from "./pages/product/list-product/list-product.component";
+import { ListProductComponent } from "./pages/list-product/list-product.component";
 import { ListOrdersComponent } from "./pages/orders/list-orders/list-orders.component";
 import { CreateUserComponent } from "./pages/user-management/create-user/create-user.component";
 import { ViewUserComponent } from "./pages/user-management/view-user/view-user.component";
@@ -34,7 +34,7 @@ const routes: Routes = [
         {path: 'view-categories', component: ViewCategoryComponent}
     ]},
     {path: 'product', children: [
-        {path: 'create-product', component: CreateProductComponent, pathMatch:'full'},
+        {path: 'create-product', redirectTo:"create-users", component: CreateProductComponent, pathMatch:'full'},
         {path: 'list-product', component: ListProductComponent, pathMatch:'full'},
     ]},
     {path: 'user-management', children: [
@@ -45,8 +45,23 @@ const routes: Routes = [
 ]
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes), SharedModule],
-    exports: [RouterModule],
     
+    imports: [RouterModule.forRoot(routes),
+    
+        
+    ],
+    exports: [RouterModule,
+        
+        CreateProductComponent,
+        ListProductComponent,
+        CreateCategoryComponent,
+        ViewCategoryComponent,
+        CreateUserComponent,
+        ViewUserComponent,
+        ListOrdersComponent
+    ],
+
 })
-export class AppRoutingModule {}
+export class AppRoutingModule {
+    
+}

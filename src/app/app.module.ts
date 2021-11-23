@@ -6,13 +6,13 @@ import { SharedModule } from './shared/shared.module';
 import { HomeComponent } from './pages/home/home.component';
 import { DashBoardComponent } from './pages/dash-board/dash-board.component';
 import { CreateProductComponent } from './pages/product/create-product/create-product.component';
-import { ListProductComponent } from './pages/product/list-product/list-product.component';
+import { ListProductComponent } from './pages/list-product/list-product.component';
 import { CreateCategoryComponent } from './pages/categories/create-category/create-category.component';
 import { ViewCategoryComponent } from './pages/categories/view-category/view-category.component';
 import { CreateUserComponent } from './pages/user-management/create-user/create-user.component';
 import { ViewUserComponent } from './pages/user-management/view-user/view-user.component';
 import { ListOrdersComponent } from './pages/orders/list-orders/list-orders.component';
-import { AppRoutingModule } from './app-routing.module';
+//import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -29,7 +29,7 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   imports: [
     
-    AppRoutingModule,
+    //AppRoutingModule,
     BrowserModule,
     SharedModule,
   ],

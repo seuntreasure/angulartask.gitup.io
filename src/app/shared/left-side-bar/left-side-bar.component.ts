@@ -16,12 +16,12 @@ export class LeftSideBarComponent implements OnInit {
     this.navItem.push(
       {
         name : 'DashBoard',
-        link : 'dashboard',
+        link : '#',
         subMenu : []
     },
       {
         name : 'Product',
-        link : 'product',
+        link : '#',
         subMenu : [{
           name : 'Create Product',
           link : 'create-product',
@@ -36,7 +36,7 @@ export class LeftSideBarComponent implements OnInit {
     },
       {
         name: "Orders",
-        link: "orders",
+        link: "#",
         subMenu: [
           {
             name: "List Orders",
